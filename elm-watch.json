@@ -1,0 +1,11 @@
+{
+    "targets": {
+        "elm-book": {
+            "inputs": [
+                "src/Book.elm"
+            ],
+            "output": "public/elm.js"
+        }
+    },
+    "serve": "./public"
+}

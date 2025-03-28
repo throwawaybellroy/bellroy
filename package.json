@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.17",
+    "elm": "^0.19.1-6",
+    "elm-watch": "^2.0.0-beta.6",
+    "run-pty": "^5.0.0",
+    "tailwindcss": "^4.0.17"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/style.css -o ./public/style.css",
+    "build:js": "elm make src/Book.elm --output public/elm.js",
+    "watch": "run-pty % npm run watch:css % npm run watch:js",
+    "watch:css": "tailwindcss -i ./src/style.css -o ./public/style.css --watch",
+    "watch:js": "elm-watch hot"
+  }
+}
