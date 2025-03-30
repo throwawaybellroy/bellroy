@@ -6,6 +6,8 @@ import Chapter.ProductCard
 import Chapter.Swatch
 import ElmBook exposing (Book)
 import ElmBook.StatefulOptions
+import ElmBook.ThemeOptions
+import Html
 
 
 type alias State =
@@ -26,6 +28,18 @@ main =
     ElmBook.book "Book"
         |> ElmBook.withStatefulOptions
             [ ElmBook.StatefulOptions.initialState init ]
+        |> ElmBook.withThemeOptions
+            [ ElmBook.ThemeOptions.globals
+                [ Html.node "style" [] [ Html.text """
+.elm-book__chapter-component__content {
+  border: none !important;
+}
+code {
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+""" ] ]
+            ]
         |> ElmBook.withChapterGroups
             [ ( "General"
               , [ Chapter.Overview.chapter

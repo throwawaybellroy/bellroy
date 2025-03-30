@@ -8,10 +8,11 @@ Uses Tailwind for CSS needs and elm-book to show off the created component.
 
 ```bash
 npm install
-npm run start
+npm run start # or npm run watch
 ```
 
-or just preview the deployed elm-book at [TODO](https://example.com)
+or just preview the deployed elm-book at
+[Github Pages](https://throwawaybellroy.github.io/bellroy/).
 
 ## The component
 
@@ -20,4 +21,4 @@ interactivity to be interesting:
 
 ![bellroy.com screenshot](https://github.com/throwawaybellroy/bellroy/raw/main/bellroy-com-screenshot.webp)
 
-It's named `ProductCard` in the code.
+It's named `ProductCard` in the code. More info in the storybook!

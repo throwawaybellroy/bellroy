@@ -24,13 +24,9 @@ view props =
                     isSelected : Bool
                     isSelected =
                         color.slug == props.selectedColor.slug
-
-                    classes : String
-                    classes =
-                        "relative w-6 h-6 rounded-full cursor-pointer bg-center"
                 in
                 Html.div
-                    [ Html.Attributes.class classes
+                    [ Html.Attributes.class "relative w-6 h-6 rounded-full cursor-pointer bg-center"
                     , UI.Color.bgStyle color.type_
                     , Html.Events.onClick (props.onSelectColor color)
                     , Html.Attributes.title color.name
@@ -39,7 +35,7 @@ view props =
                     ]
                     [ Html.div
                         [ Html.Attributes.Extra.attributeIf isSelected <|
-                            Html.Attributes.class "absolute inset-0 rounded-full border-2 border-white pointer-events-none"
+                            Html.Attributes.class "absolute inset-0 rounded-full border-2 border-white"
                         ]
                         []
                     ]

@@ -61,7 +61,20 @@ chapter =
                     }
             )
         |> ElmBook.Chapter.render """
-Swatch is a [Color](/types/color) picker. TODO.
+<component />
+```elm
+module UI.Swatch
+
+view :
+    { colors : List UI.Color.Color
+    , selectedColor : UI.Color.Color
+    , onSelectColor : UI.Color.Color -> msg
+    }
+    -> Html msg
+```
+
+
+Swatch is a [Color](/types/color) picker. Provides interactivity on click.
 
 ```elm
 UI.Swatch.view
@@ -70,6 +83,4 @@ UI.Swatch.view
     , onSelectColor = SelectColor
     }
 ```
-
-<component />
 """
