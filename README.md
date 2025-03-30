@@ -12,7 +12,7 @@ npm run start # or npm run watch
 ```
 
 or just preview the deployed elm-book at
-[Github Pages](https://throwawaybellroy.github.io/bellroy/).
+[Netlify](https://throwawaybellroy.netlify.app/).
 
 ## The component
 
